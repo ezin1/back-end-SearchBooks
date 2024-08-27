@@ -1,0 +1,37 @@
+{
+  "name": "backl-end-caranalyzer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ./src/main/server.ts",
+    "start": "nodemon ./src/main/server.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express-rate-limit": "^6.0.0",
+    "@types/kafkajs": "^1.9.0",
+    "@types/knex": "^0.16.1",
+    "@types/node-cron": "^3.0.11",
+    "@types/pino": "^7.0.5",
+    "@types/pino-pretty": "^5.0.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.4.0",
+    "kafkajs": "^2.2.4",
+    "knex": "^3.1.0",
+    "node-cron": "^3.0.3",
+    "pino": "^9.3.2",
+    "pino-pretty": "^11.2.2",
+    "ts-node": "^10.9.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.1.0",
+    "nodemon": "^3.1.4",
+    "typescript": "^5.5.4"
+  }
+}
