@@ -2,7 +2,7 @@ import express, { Application, Request, Response } from 'express';
 import rateLimit from 'express-rate-limit';
 import routes from './routes';
 import cron from 'node-cron';
-import cors from 'cors';
+import  cors  from 'cors';
 import { startKafkaConsumer } from '../infra/kafka/kafka';
 export const setupApp = () => {
     const app: Application = express();
@@ -10,7 +10,7 @@ export const setupApp = () => {
     app.use(express.json());
     app.set('trust proxy', 1);
     app.use(cors());
-    
+
     app.use(
         rateLimit({
             windowMs: 1 * 60 * 1000,
@@ -40,7 +40,7 @@ export const setupApp = () => {
     //   });
 
     app.use('/api', routes);
-  
+
     app.get('/', (request: Request, response: Response) => {
         response.json({
             response: 'successfull',
