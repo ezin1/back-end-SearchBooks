@@ -4,11 +4,11 @@ import knexjs from 'knex';
 const localDb = knexjs({
   client: 'pg',
   connection: {
-    host: "silly.db.elephantsql.com",
-    user: "wuanukkx",
-    password: "Or6BzbBKveLEI80DjaiR83yz6dQRh7Az",
+    host: "isabelle.db.elephantsql.com",
+    user: "irehdqyu",
+    password: "6DGK9C6-OCMcm11Ku2w0-MY_iBNbCufX",
     port: 5432,
-    database: "wuanukkx",
+    database: "irehdqyu",
     pool: {
       max: 5,
     },

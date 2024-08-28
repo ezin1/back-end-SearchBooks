@@ -16,6 +16,7 @@
     "@types/kafkajs": "^1.9.0",
     "@types/knex": "^0.16.1",
     "@types/node-cron": "^3.0.11",
+    "@types/pg": "^8.11.7",
     "@types/pino": "^7.0.5",
     "@types/pino-pretty": "^5.0.0",
     "dotenv": "^16.4.5",
@@ -24,6 +25,7 @@
     "kafkajs": "^2.2.4",
     "knex": "^3.1.0",
     "node-cron": "^3.0.3",
+    "pg": "^8.12.0",
     "pino": "^9.3.2",
     "pino-pretty": "^11.2.2",
     "ts-node": "^10.9.2"

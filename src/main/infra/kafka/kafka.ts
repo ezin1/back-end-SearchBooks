@@ -1,5 +1,5 @@
 import { Kafka, Consumer, EachMessagePayload } from 'kafkajs';
-
+import { BooksDBRepository } from '../../../shared/repositories/implements/books.repository';
 export const startKafkaConsumer = async (
   brokers: string[],
   clientId: string,
@@ -19,11 +19,27 @@ export const startKafkaConsumer = async (
 
     await consumer.run({
       eachMessage: async ({ topic, partition, message }: EachMessagePayload) => {
-        console.log({
-          partition,
-          offset: message.offset,
-          value: message.value?.toString(), 
-        });
+        const scrapedData = message.value?.toString();
+        
+        if (scrapedData) {
+          const booksDetails = JSON.parse(scrapedData);
+          console.log({
+            partition,
+            offset: message.offset,
+            booksDetails,
+          });
+
+
+          const booksRepository = new BooksDBRepository();
+
+          await booksRepository.insertBooks(booksDetails);
+
+          console.log('Books inserted in database');
+
+        
+          
+
+        }
       },
     });
   };
